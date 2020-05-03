@@ -12,12 +12,10 @@ from bs4 import BeautifulSoup
 from openpyxl import load_workbook
 from datetime import date, datetime
 
-from Module.browser_control import Trigger_driver as Td
+from Module.Cbrowser_control import Web_search
 
 URL = 'http://rtdown.molit.go.kr/'
 Down_ROOT = os.getcwd()+"\grond_info"
-#<input id="searchFromDt" name="searchFromDt" class="input_search" onchange="javascript:fn_dong_search();" type="text" value="20200401" maxlength="10">
-#<input id="searchToDt" name="searchToDt" class="input_search" type="text" value="20200430" maxlength="10">
 
 def What_time_now():  
     day = datetime.now()
@@ -27,5 +25,7 @@ prevtime = time.time()
 now = datetime.now()
 
 if __name__ == "__main__":
-    Td(URL)
+    WS = Web_search(URL)
+    del WS
+    
     print("걸린시간 : %0.5f" %(time.time() - prevtime) )
