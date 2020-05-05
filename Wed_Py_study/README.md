@@ -5,9 +5,9 @@
 - 기술조사 동향조사 등등  
 
 ### 0429  
-- 2주뒤 크롤링 및 문서화 프로토 타입 제작  
+- 2주뒤 각자 프로토 타입 제작  
 - 코드 리뷰 및 피드백  
-- Git review && study 
+- Git review && study  
       [gitkraken](https://cupjoo.tistory.com/9)  
       [rule-1 branch](https://gmlwjd9405.github.io/2018/05/11/types-of-git-branch.html)  
       [rule-2 commit](https://blog.ull.im/engineering/2019/03/10/logs-on-git.html)  
