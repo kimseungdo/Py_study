@@ -27,13 +27,21 @@ using namespace std;
 class Solution {
 public:
     int maxDepth(TreeNode* root) {
-        int depth = 0;
+        int depth = 1;
 
         return depth;    
     }
 
 };
-
+/* ÃÖÁ¾´ä 
+class Solution {
+public:
+    int maxDepth(TreeNode* root) {
+        if(root == NULL) return 0;
+        return max(maxDepth(root->left), maxDepth(root->right))+1;
+    }
+};
+*/
 int main(void){
     Solution *S = new Solution();
     vector<int> abc = {3,9,20,NULL,NULL,15,7};
