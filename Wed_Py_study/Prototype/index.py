@@ -17,7 +17,7 @@ from Module.Cbrowser_control import Web_search, Web_Driver
 prevtime = time.time()
 now = datetime.now()
 
-#URL = 'http://rtdown.molit.go.kr/'
+URL = 'http://rtdown.molit.go.kr/'
 Down_ROOT = os.getcwd()+"\grond_info"
 
 def What_time_now():  
@@ -25,18 +25,17 @@ def What_time_now():
     return str('{0.year:04}{0.month:02}{0.day:02}_{0.hour:02}h{0.minute:02}m{0.second:02}s'.format(day) )
 
 
-
-
-
 def main():
     WD = Web_Driver(URL, True)
+    WD.Show_Browser_set()
     WD.Trigger_driver()
 
+    '''
+    print(WD.__dict__)
+
+    '''
     del WD
-
-
-
-
+    
 if __name__ == "__main__":
     main()
     print("걸린시간 : %0.5f" %(time.time() - prevtime) )
