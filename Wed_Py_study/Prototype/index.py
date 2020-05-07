@@ -8,17 +8,29 @@ import os, time
 import requests
 import pandas
 
-from bs4 import BeautifulSoup
+
 from openpyxl import load_workbook
 from datetime import date, datetime
 
-from Module.Cbrowser_control import Web_search, Web_Driver
+
+from multiprocessing import Process, Queue
+
+
+from Module.Cbrowser_control import Web_Driver # 자료 다운로드
+from Module.Cbrowser_get_info import Web_Info # 웹에서 즉각 검색
+
 
 prevtime = time.time()
 now = datetime.now()
 
-URL = 'http://rtdown.molit.go.kr/'
+
+APT_URL = 'http://land.seoul.go.kr/land/rtms/rtmsApartment.do'
+DOWN_URL = 'http://land.seoul.go.kr/land/rtms/transactionInfo.do'
+
 Down_ROOT = os.getcwd()+"\grond_info"
+
+
+
 
 def What_time_now():  
     day = datetime.now()
@@ -26,12 +38,14 @@ def What_time_now():
 
 
 def main():
-    WD = Web_Driver(URL, True)
+    WD = Web_Driver(DOWN_URL, True)
     WD.Show_Browser_set()
     WD.Trigger_driver()
 
     '''
-    print(WD.__dict__)
+    print(dir(WD)) #  사용가능 첨자 확인 
+    print(WD.__dict__) # 클래스 관계 확인
+    
 
     '''
     del WD
