@@ -15,7 +15,7 @@ from datetime import date, datetime
 
 from multiprocessing import Process, Queue
 
-
+from Module.Cinit_file import check_sys # 폴더 파일상태 확인
 from Module.Cbrowser_control import Web_Driver # 자료 다운로드
 from Module.Cbrowser_get_info import Web_Info # 웹에서 즉각 검색
 
@@ -24,12 +24,9 @@ prevtime = time.time()
 now = datetime.now()
 
 
+
 APT_URL = 'http://land.seoul.go.kr/land/rtms/rtmsApartment.do'
 DOWN_URL = 'http://land.seoul.go.kr/land/rtms/transactionInfo.do'
-
-Down_ROOT = os.getcwd()+"\grond_info"
-
-
 
 
 def What_time_now():  
@@ -37,11 +34,17 @@ def What_time_now():
     return str('{0.year:04}{0.month:02}{0.day:02}_{0.hour:02}h{0.minute:02}m{0.second:02}s'.format(day) )
 
 
+
 def main():
+    CS = check_sys()
+    CS.Folder_check()
+    del CS
+    
     WD = Web_Driver(DOWN_URL, True)
     WD.Show_Browser_set()
     WD.Trigger_driver()
-
+    
+    print("%s %s" %(WD.deal, WD.kind))
     '''
     print(dir(WD)) #  사용가능 첨자 확인 
     print(WD.__dict__) # 클래스 관계 확인
