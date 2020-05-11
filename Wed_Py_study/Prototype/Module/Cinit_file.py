@@ -16,8 +16,8 @@ class check_sys:
         if display_info == True:
             print("check sys des")
     
-    def File_check():
-        pass
+    #def File_check():
+    #    pass
 
     def Folder_check(self):
         try:
@@ -28,8 +28,7 @@ class check_sys:
                 else:
                     print(" ")
                     
-        except:
-            if OSError.errno != OSError.filenameerrno.EEXIST:
-                print("Failed to create directory!!!!!")
+        except OSError:
+            if not os.path.isdir(PATH+F):
                 raise
             
