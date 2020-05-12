@@ -4,5 +4,6 @@
         "iostream": "cpp",
         "cstdlib": "cpp",
         "vector": "cpp"
-    }
+    },
+    "git.ignoreLimitWarning": true
 }
