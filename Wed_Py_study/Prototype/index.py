@@ -24,7 +24,6 @@ prevtime = time.time()
 now = datetime.now()
 
 
-
 APT_URL = 'http://land.seoul.go.kr/land/rtms/rtmsApartment.do'
 DOWN_URL = 'http://land.seoul.go.kr/land/rtms/transactionInfo.do'
 
@@ -44,15 +43,15 @@ def main():
     WD.Show_Browser_set()
     WD.Trigger_driver()
     
-    print("%s %s" %(WD.deal, WD.kind))
+    #print("%s %s" %(WD.deal, WD.kind))
     '''
     print(dir(WD)) #  사용가능 첨자 확인 
     print(WD.__dict__) # 클래스 관계 확인
-    
-
     '''
     del WD
     
+
+
 if __name__ == "__main__":
     main()
     print("걸린시간 : %0.5f" %(time.time() - prevtime) )

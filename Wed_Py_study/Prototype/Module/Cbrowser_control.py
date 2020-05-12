@@ -51,12 +51,6 @@ class Web_search:
 class Web_Driver(Web_search):
     #### CHECK SYS ####
     FILE_SIZE = 10
-    # key : value //
-    deal = {'selectGubun': '매매'}
-    kind = {'selectKind' : '아파트'}
-    
-    fromDay, toDay = {'selectFromMm' : None}, {'selectToMn' : None}
-    gu, dong = {'selectSigungu' : '강남구'}, {'selectBjdong' : None}
     
     def __init__(self, url, OnOff):
         if display_info == True:
