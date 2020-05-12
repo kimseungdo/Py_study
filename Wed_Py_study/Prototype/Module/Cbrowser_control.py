@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import time
 
@@ -5,6 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 
 display_info = False
+option_onoff_switch = False # On/Off
 
 DOWNLOAD_FOLDER_PATH = os.getcwd()+"\\excel_folder"
 prefs = {"download.default_directory" : DOWNLOAD_FOLDER_PATH}
@@ -12,6 +14,12 @@ prefs = {"download.default_directory" : DOWNLOAD_FOLDER_PATH}
 chrome_options = webdriver.ChromeOptions() # 옵션 변수명 설정 
 chrome_options.add_experimental_option("prefs", prefs)
 DRIVER_PATH = os.getcwd() + "\\chromedriver_win32_81version\\chromedriver.exe"
+
+if option_onoff_switch == False:
+    driver = None
+    
+else:
+    driver = webdriver.Chrome(DRIVER_PATH, chrome_options = chrome_options)
 
 driver = webdriver.Chrome(DRIVER_PATH, chrome_options = chrome_options)        
 
