@@ -1,3 +1,5 @@
+#include <vector>
+
 class Solution {
     public: int missingNumber(vector<int>& nums) { 
         //vector<int> cpy(nums.size(), 0); 
@@ -16,5 +18,5 @@ class Solution {
 };
 
 /*
-¼ø¿­ÇØ¼­ ÀÒ¾î¹ö¸° ÀÎµ¦½º Ã£¾Æ¶ó
+ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½Ò¾ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ Ã£ï¿½Æ¶ï¿½
 */
