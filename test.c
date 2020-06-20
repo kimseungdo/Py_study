@@ -1,23 +1,31 @@
 #include <stdio.h>
 
-#define array_size {}
-void print_array_reverse(int* A, int size){
+int main(void) {
 
-    printf("역순 : ");
-    for(int i=size-1; i>=0; i--){
-        printf("%d ", A[i]);
-    }printf("\n");
+   char ch[100];
+   char stop[10] = { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
 
-}
-int main(void){
-    int data[5] = {1, 2, 3, 4, 5};
+   printf("텍스트를 입력한다: ");
+   gets_s(ch, 99);
+
+   for (int i = 0; i < 100; i++) {
+      for (int j = 0; j < 10; j++) {
+         if (ch[i] == stop[j])
+            for (int k = i; k < 99; k++)
+               ch[k] = ch[k + 1];
+         
+      }
+   }
+
+
+         ch    =   A  B  C  \n
+
+ch[0] = ch[1]  =   B  B  C  \n
     
-    printf("5개의 정수를 입력하시오:");
-    for(int i=0; i < sizeof(data)/sizeof(int) ; i++){
-        printf("%d ", data[i]);
-    }printf("\n");
+ch[1] = ch[2]  =   B  C  C  \n
 
-    print_array_reverse(data, sizeof(data)/sizeof(int));
-
-    return 0;
+ch[2] = ch[3]  =   B  C  \n
+   int a = 1;
+   
+return 0;
 }
