@@ -10,7 +10,7 @@ public:
             
             if( 1<< i&n ){
               //counter++; //??
-               cout<< (1<<i&n) <<endl;
+                std::cout<< (1<<i&n) <<std::endl;
                 
             }//cout<< typeid(i).name() <<endl;
         }

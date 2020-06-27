@@ -13,5 +13,4 @@ public:
         }// end for i
         return res_v;
     }
-    
 };

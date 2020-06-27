@@ -6,8 +6,6 @@ public:
         
         for(int i=0; i<numbers.size(); i++){
             if ( maching.find(numbers[i]) == maching.end() )
-            // iterator 반환  find(key) : key값에 해당하는 iterator를 반환
-            // end() : end iterator를 반환 (타입은 자료의 마지막값 다음 메모리 주소이다. 이는 곧 비어있음을 의미한다. )
                 maching[target - numbers[i]] = i; //
             else { 
                 // found the second one
