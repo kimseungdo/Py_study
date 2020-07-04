@@ -16,15 +16,15 @@ public:
         return aaa(root->left, root->right);
     }
     bool aaa(TreeNode* L, TreeNode* R){
-        if(L == NULL && R == NULL) return true; // ╣я ЁК╣Е ╟╙юл Ё║╠НаЖ ╟ё╟е╢о╠Н 1
-        if(L == NULL || R == NULL) return false; // ╣я ЁК╣Е╟║ ╟╙юл гоЁ╙╤С╣╣ ╬Ью╦╦И 0
+        if(L == NULL && R == NULL) return true; // О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫е╢о╠О©╫ 1
+        if(L == NULL || R == NULL) return false; // О©╫О©╫ О©╫О©╫Е╟║ О©╫О©╫О©╫О©╫ О©╫оЁО©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ 0
         return L->val == R->val && aaa(L->left, R->right);
         
     }
 };
 
 /*
-2аЬф╝╦╝╟║ аж╬НаЭ Ёй╢б ╢Кд╙юнаЖ х╝юнгь╤С
+2О©╫О©╫ф╝О©╫О©╫О©╫О©╫ О©╫ж╬О©╫О©╫О©╫ О©╫й╢О©╫ О©╫О©╫д╙О©╫О©╫О©╫О©╫ х╝О©╫О©╫О©╫ь╤О©╫
 =========================
 Input[1,2,3]
 Output true
