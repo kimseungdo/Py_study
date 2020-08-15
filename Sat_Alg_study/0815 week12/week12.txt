@@ -1,0 +1,5 @@
+22. 개문부분 스택사용 
+78. c
+
+https://twpower.github.io/90-combination-by-using-next_permutation combination 함수 링크
+https://stackoverflow.com/questions/2693683/tail-recursion-in-c tailrecursive 만들기?'
